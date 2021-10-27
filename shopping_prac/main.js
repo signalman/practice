@@ -13,7 +13,6 @@ function onAdd(){
 
   item.scrollIntoView({block:'end', behavior:"smooth"});
 
-
   input.value = '';
   input.focus();
 }
@@ -45,13 +44,13 @@ function createItem(text) {
   itemRow.appendChild(item);
   itemRow.appendChild(itemDivider);
   return itemRow;
-  }
+}
 
 addBtn.addEventListener('click', ()=>{
   onAdd();
 })
 
-input.addEventListener('keypress',event=>{
+input.addEventListener('keydown',event=>{
   if(event.keyCode===13){
     onAdd();
   }
