@@ -1,11 +1,26 @@
 const playBtn = document.querySelector('.play-btn');
+const bg = new Audio('sound/bg.mp3');
+const i = document.querySelector('i');
+
+
 playBtn.addEventListener('click', gameStart);
+let click = 0;
 function gameStart(){
-  countStart();
-  // countNumberOfCarrots();
-  createCarrot();
-  const audio = new Audio('sound/bg.mp3');
-  audio.play();
+  if(click%2===1){
+    bg.pause();
+    i.classList.remove('fa-stop');
+    i.classList.add('fa-play');
+  }
+  else{
+    countStart();
+    // countNumberOfCarrots();
+    createCarrot();
+    bg.play();
+    i.classList.remove('fa-play');
+    i.classList.add('fa-stop');
+
+  }
+  click++;
 }
 function countStart(){
 
