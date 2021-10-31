@@ -4,7 +4,8 @@ function gameStart(){
   countStart();
   // countNumberOfCarrots();
   createCarrot();
-
+  const audio = new Audio('sound/bg.mp3');
+  audio.play();
 }
 function countStart(){
 
