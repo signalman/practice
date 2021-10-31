@@ -8,4 +8,4 @@ class person {
 
 const hoin = new person('hoin', 25);
 console.log(hoin.name);
-console.log(hoin.age);
+console.log(hoin.age); 
